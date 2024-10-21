@@ -22,4 +22,7 @@ class DeviceCreateSchema(Schema):
 
 class Error(BaseModel):
     message: str = "An error occurred"
-    
+
+
+class DeviceLocationPatch(Schema):
+    location_id : int | None = None
