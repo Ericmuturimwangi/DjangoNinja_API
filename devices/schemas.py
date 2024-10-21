@@ -1,5 +1,6 @@
-from ninja import ModelSchema
+from ninja import ModelSchema, Schema
 from devices.models import Device, Location
+from pydantic import BaseModel
 
 
 class LocationSchema(ModelSchema):
@@ -13,3 +14,12 @@ class DeviceSchema(ModelSchema):
     class Meta:
         model = Device
         fields = ('id', 'name', 'slug', 'location')
+
+class DeviceCreateSchema(Schema):
+    name: str
+    location_id : int | None = None
+
+
+class Error(BaseModel):
+    message: str = "An error occurred"
+    

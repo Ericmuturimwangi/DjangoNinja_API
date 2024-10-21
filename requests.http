@@ -1,0 +1,8 @@
+POST http://localhost:8000/api/devices/
+Content-Type: application/json
+
+{
+    "name": "Light Detector",
+    "location_id": 2
+
+}
