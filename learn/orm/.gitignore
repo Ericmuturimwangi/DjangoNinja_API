@@ -1,0 +1,14 @@
+# Ignore parent directories
+../*
+
+# Python-specific ignores
+*.pyc
+__pycache__/
+
+# Ignore environment files
+.env
+db.sqlite3
+
+Bookstore/
+django-react-auth/
+flower_prediction/
