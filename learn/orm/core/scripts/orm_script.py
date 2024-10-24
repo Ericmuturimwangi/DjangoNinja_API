@@ -1,11 +1,11 @@
-from core.models import Restaurant
+from django.contrib.auth.models import User
+from core.models import Restaurant, Rating
 from django.utils import timezone
 from django.db import connection
 
 def run():
-
     restaurant = Restaurant.objects.first()
-    print(restaurant)
+    user = User.objects.first()
 
-    print (connection.queries)
+    Rating.objects.create(user=user, restaurant=restaurant, rating = 3)
 
