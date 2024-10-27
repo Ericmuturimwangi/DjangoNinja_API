@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <!-- Include any CSS files -->
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Welcome to My Website{% endblock %}</h1>
+        <!-- Navigation -->
+   
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Default content in case child template does not override -->
+        <p>This is the main content area.</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+
+    <!-- Include any JavaScript files --></body>
+</html>

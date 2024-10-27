@@ -11,6 +11,5 @@ def run():
 
     rating = Rating(user=user, restaurant=restaurant, rating=9)
 
-    rating.full_clean()
+    # rating.full_clean()
     rating.save()
-    
